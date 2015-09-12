@@ -1,0 +1,22 @@
+# General shortcuts
+# ls all
+alias ll='ls -la'
+# ls + sort by file size + display K, M, G, etc.
+alias lss='ls -lahS'
+# ls + sort by last added with most recent at bottom
+alias la='ls -laUr'
+# ls + sort by last modified with most recent at bottom
+alias lm='ls -latr'
+# ls + sort by last accessed with most recent at bottom
+alias lac='ls -laur'
+
+# Shortcuts for school
+alias S='cd /Users/ecr/Documents/School/12\(2015-16\)'
+alias c='cd /Users/ecr/Documents/School/12\(2015-16\)/APCalcBC'
+alias e='cd /Users/ecr/Documents/School/12\(2015-16\)/APEcon'
+alias g='cd /Users/ecr/Documents/School/12\(2015-16\)/APGov'
+alias l='cd /Users/ecr/Documents/School/12\(2015-16\)/APLit'
+alias f='cd /Users/ecr/Documents/School/12\(2015-16\)/APPhysicsC'
+alias p='cd /Users/ecr/Documents/School/12\(2015-16\)/APPsych'
+alias m='cd /Users/ecr/Documents/School/12\(2015-16\)/MathResearch'
+alias s='cd /Users/ecr/Documents/School/12\(2015-16\)/Sociology'
