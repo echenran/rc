@@ -3,31 +3,57 @@
 alias ll='ls -la'
 # ls + sort by file size + display K, M, G, etc.
 alias lss='ls -lahS'
-# ls + sort by last added with most recent at bottom
-alias la='ls -laUr'
+# ls + sort by last created with most recent at bottom - doesn't work intuitively
+alias lc='ls -laUr'
 # ls + sort by last modified with most recent at bottom
 alias lm='ls -latr'
 # ls + sort by last accessed with most recent at bottom
-alias lac='ls -laur'
+alias la='ls -laur'
+# cd to Downloads
+alias dow='cd /Users/ecr/Downloads'
+# cd to Documents
+alias doc='cd /Users/ecr/Documents'
+# cd to Google Drive
+alias dr='cd /Users/ecr/Google\ Drive/'
+# cd to Dropbox
+alias db='cd /Users/ecr/Dropbox'
 
 # Shortcuts for school
-alias S='cd /Users/ecr/Documents/School/12\(2015-16\)'
-alias c='cd /Users/ecr/Documents/School/12\(2015-16\)/APCalcBC'
-alias e='cd /Users/ecr/Documents/School/12\(2015-16\)/APEcon'
-alias g='cd /Users/ecr/Documents/School/12\(2015-16\)/APGov'
-alias l='cd /Users/ecr/Documents/School/12\(2015-16\)/APLit'
-alias f='cd /Users/ecr/Documents/School/12\(2015-16\)/APPhysicsC'
-alias p='cd /Users/ecr/Documents/School/12\(2015-16\)/APPsych'
-alias m='cd /Users/ecr/Documents/School/12\(2015-16\)/MathResearch'
-alias s='cd /Users/ecr/Documents/School/12\(2015-16\)/Sociology'
+alias S='cd /Users/ecr/Documents/school/12\(2015-16\)'
+alias c='cd /Users/ecr/Documents/school/12\(2015-16\)/APCalcBC'
+alias e='cd /Users/ecr/Documents/school/12\(2015-16\)/APEcon'
+alias g='cd /Users/ecr/Documents/school/12\(2015-16\)/APGov'
+alias l='cd /Users/ecr/Documents/school/12\(2015-16\)/APLit'
+alias f='cd /Users/ecr/Documents/school/12\(2015-16\)/APPhysicsC'
+alias p='cd /Users/ecr/Documents/school/12\(2015-16\)/APPsych'
+alias m='cd /Users/ecr/Documents/school/12\(2015-16\)/MathResearch'
+alias s='cd /Users/ecr/Documents/school/12\(2015-16\)/Sociology'
 
 # Paths for school
-export S='/Users/ecr/Documents/School/12(2015-16)'
-export c='/Users/ecr/Documents/School/12(2015-16)/APCalcBC'
-export e='/Users/ecr/Documents/School/12(2015-16)/APEcon'
-export g='/Users/ecr/Documents/School/12(2015-16)/APGov'
-export l='/Users/ecr/Documents/School/12(2015-16)/APLit'
-export f='/Users/ecr/Documents/School/12(2015-16)/APPhysicsC'
-export p='/Users/ecr/Documents/School/12(2015-16)/APPsych'
-export m='/Users/ecr/Documents/School/12(2015-16)/MathResearch'
-export s='/Users/ecr/Documents/School/12(2015-16)/Sociology'
+export S='/Users/ecr/Documents/school/12(2015-16)'
+export c='/Users/ecr/Documents/school/12(2015-16)/APCalcBC'
+export e='/Users/ecr/Documents/school/12(2015-16)/APEcon'
+export g='/Users/ecr/Documents/school/12(2015-16)/APGov'
+export l='/Users/ecr/Documents/school/12(2015-16)/APLit'
+export f='/Users/ecr/Documents/school/12(2015-16)/APPhysicsC'
+export p='/Users/ecr/Documents/school/12(2015-16)/APPsych'
+export m='/Users/ecr/Documents/school/12(2015-16)/MathResearch'
+export s='/Users/ecr/Documents/school/12(2015-16)/Sociology'
+
+# Other paths
+export dr='/Users/ecr/Google\ Drive/'
+export dr='/Users/ecr/Google\ Drive/to\ print/'
+export db='/Users/ecr/Dropbox'
+
+# Aliases for modules
+alias jp2a='jp2a -i --height=60'
+alias play='spotify play'
+alias pause='spotify pause'
+alias n='spotify next'
+alias pv='spotify prev'
+alias ip='ifconfig | grep -e "inet 19"'
+alias br='brightness .5'
+alias ks='brightness 0'
+alias kw='killall Microsoft\ Word'
+alias ki='killall iTunes'
+alias kp='killall Preview'
