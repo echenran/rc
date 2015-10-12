@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+
+alias testing='echo "sure"'
 # General shortcuts
 # ls all
 alias ll='ls -la'
@@ -28,6 +31,7 @@ alias f='cd /Users/ecr/Documents/school/12\(2015-16\)/APPhysicsC'
 alias p='cd /Users/ecr/Documents/school/12\(2015-16\)/APPsych'
 alias m='cd /Users/ecr/Documents/school/12\(2015-16\)/MathResearch'
 alias s='cd /Users/ecr/Documents/school/12\(2015-16\)/Sociology'
+alias h='cd /Users/ecr/Documents/school/12\(2015-16\)/HerricksHighlander'
 
 # Paths for school
 export S='/Users/ecr/Documents/school/12(2015-16)'
@@ -39,10 +43,9 @@ export f='/Users/ecr/Documents/school/12(2015-16)/APPhysicsC'
 export p='/Users/ecr/Documents/school/12(2015-16)/APPsych'
 export m='/Users/ecr/Documents/school/12(2015-16)/MathResearch'
 export s='/Users/ecr/Documents/school/12(2015-16)/Sociology'
+export h='/Users/ecr/Documents/school/12(2015-16)/HerricksHighlander'
 
 # Other paths
-export dr='/Users/ecr/Google\ Drive/'
-export dr='/Users/ecr/Google\ Drive/to\ print/'
 export db='/Users/ecr/Dropbox'
 
 # Aliases for modules
@@ -51,7 +54,8 @@ alias play='spotify play'
 alias pause='spotify pause'
 alias n='spotify next'
 alias pv='spotify prev'
-alias ip='ifconfig | grep -e "inet 19"'
+
+alias ip='ifconfig | grep -e "inet "'
 alias br='brightness .5'
 alias ks='brightness 0'
 alias kw='killall Microsoft\ Word'
