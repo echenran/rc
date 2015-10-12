@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-alias testing='echo "sure"'
 # General shortcuts
 # ls all
 alias ll='ls -la'
