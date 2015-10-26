@@ -14,3 +14,4 @@ pb () {
 syn () {
         dict ${1} | tr '\n' ' ' | sed 's/^.*From Moby/From Moby/g' | sed 's/ From.*$//g' | sed 's/, */, /g'
 }
+
