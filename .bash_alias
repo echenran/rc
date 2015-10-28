@@ -30,7 +30,7 @@ alias f='cd /Users/ecr/Documents/school/12\(2015-16\)/APPhysicsC'
 alias p='cd /Users/ecr/Documents/school/12\(2015-16\)/APPsych'
 alias m='cd /Users/ecr/Documents/school/12\(2015-16\)/MathResearch'
 alias s='cd /Users/ecr/Documents/school/12\(2015-16\)/Sociology'
-alias h='cd /Users/ecr/Documents/school/12\(2015-16\)/HerricksHighlander'
+alias h='cd /Users/ecr/Documents/school/12\(2015-16\)/highlander'
 
 # Paths for school
 export S='/Users/ecr/Documents/school/12(2015-16)'
@@ -42,7 +42,7 @@ export f='/Users/ecr/Documents/school/12(2015-16)/APPhysicsC'
 export p='/Users/ecr/Documents/school/12(2015-16)/APPsych'
 export m='/Users/ecr/Documents/school/12(2015-16)/MathResearch'
 export s='/Users/ecr/Documents/school/12(2015-16)/Sociology'
-export h='/Users/ecr/Documents/school/12(2015-16)/HerricksHighlander'
+export h='/Users/ecr/Documents/school/12(2015-16)/highlander'
 
 # Other paths
 export db='/Users/ecr/Dropbox'
