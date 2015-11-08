@@ -47,16 +47,19 @@ export h='/Users/ecr/Documents/school/12(2015-16)/highlander'
 # Other paths
 export db='/Users/ecr/Dropbox'
 
-# Aliases for modules
+#----------Aliases for modules----------
 alias jp2a='jp2a -i --height=60'
 alias play='spotify play'
 alias pause='spotify pause'
 alias n='spotify next'
 alias pv='spotify prev'
-
 alias ip='ifconfig | grep -e "inet "'
 alias br='brightness .5'
 alias ks='brightness 0'
 alias kw='killall Microsoft\ Word'
 alias ki='killall iTunes'
 alias kp='killall Preview'
+
+#----------Miscellaneous----------
+#Get one paragraph of ipsum
+alias templipsum='curl http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\>\ Lorem/Lorem/g | sed s/\<.p\>.*$//g'

@@ -5,8 +5,12 @@ colorscheme elflord
 
 set expandtab
 set tabstop=4
+set shiftwidth=2
 set smarttab
 
+map <C-w> db
+map <CR> i<CR>
+map ' i<CR><ESC>
 " For PPH lines<80
 "if exists('+colorcolumn')
 "    set colorcolumn=80

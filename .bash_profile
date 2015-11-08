@@ -18,3 +18,4 @@ shopt -s extglob
 
 source /Users/ecr/.bash_alias
 source /Users/ecr/.bash_functions
+#banner -w 40 "thanks, thanks"
