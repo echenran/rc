@@ -5,6 +5,3 @@ templipsum > loremipsum.txt
 cat loremipsum.txt | sed -e $'s/\.\ /\.\\\n/g' | pbcopy
 pbpaste > loremipsum.txt
 templipsum >> loremipsum.txt
-
-
-
