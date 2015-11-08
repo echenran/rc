@@ -1,3 +1,4 @@
+#!/bin/bash
 site='http://herricks.org/webpages/jmcmanus/'
 file=$(curl 'http://herricks.org/webpages/jmcmanus/appsych.cfm?subpage=11599' | grep 'files/' | sed 's/.*files/files/g' | sed 's/"\>.*$//g' | sed -e :a -e '$q;N;2,$D;ba')
 site=$site$file
