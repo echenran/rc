@@ -1,0 +1,10 @@
+#!/bin/bash
+#must run as ". generatelipsum" or "source generatelipsum"
+rm loremipsum.txt
+templipsum > loremipsum.txt
+cat loremipsum.txt | sed -e $'s/\.\ /\.\\\n/g' | pbcopy
+pbpaste > loremipsum.txt
+templipsum >> loremipsum.txt
+
+
+
