@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#change volume
+v () {
+  osascript -e "set volume ${1}"
+}
+
 #pastebin to sprunge.us
 sprunge () {
         pastebinit -b sprunge.us ${1:--}
@@ -27,4 +32,21 @@ wp () {
     takennames=$(ls | grep -e $pname);
   done 
   curl -s ${1} | grep "<meta content='https://d" | tr "\n" " " | sed "s/<meta content='//g" | sed "s/'.*$//g" | xargs wget -O $pname".jpg";
+}
+
+#Checks if a file name is taken; if not, starts a new executable
+new () {
+  fname="${1}"  
+  files=$(ls | grep -e $fname)
+  while [ "$files" != "" ]
+  do
+    echo "The following filenames are already taken: $files";
+    echo -n "Enter another name: ";
+    read altname;
+    fname="$altname";
+    files=$(ls | grep -e $fname)
+  done
+  touch $fname
+  chmod a+x $fname
+  vim $fname
 }
