@@ -1,7 +1,15 @@
 #!/usr/bin/env python
 import time
 
-countdowninfo = [i.strip().split("=") for i in open(".countdowns").readlines()]
+try:
+  countdowninfo = [i.strip().split("=") for i in open(".countdowns").readlines()]
+except Exception:
+  print("Countdown file is empty or something went amok :(")
+  import sys;sys.exit(1)
+
+if len(countdowninfo[0])==1:
+  print("No countdowns. Add one with 'cdown -a [name] [day month year]'!")
+  import sys;sys.exit(1)
 
 now = time.time()
 for i in range(0, len(countdowninfo)):
