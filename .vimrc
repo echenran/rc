@@ -8,6 +8,9 @@ set tabstop=4
 set shiftwidth=2
 set smarttab
 
+set spelllang=en
+set spell
+
 map <C-w> db
 map <CR> i<CR>
 map ' i<CR><ESC>
