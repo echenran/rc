@@ -69,7 +69,7 @@ f2c () {
 
 cdown() {
   if [ $# == 0 ]; then
-    echo "none";
+    ./countdown.py;
   elif [ "$1" == "-a" ]; then
     countdown="$2";
     results=$(cat ~/.countdowns | grep -ie "$countdown");
@@ -94,7 +94,5 @@ cdown() {
     tempcountdowns=$(cat ~/.countdowns | sed "/$countdown\=/d");
     rm ~/.countdowns;
     echo "$tempcountdowns" > ~/.countdowns;
-  elif [ "$1" == "-l" ]; then
-    ./countdown.py;
   fi
 }
