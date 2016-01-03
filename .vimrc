@@ -17,6 +17,7 @@ map <C-w> db
 map <CR> i<CR>
 map ' i<CR><ESC>
 map <C-f> :set nohlsearch<CR><ESC>
+nmap <Tab> i<Tab><ESC>
 
 " 80th column marker
 if exists('+colorcolumn')
@@ -24,3 +25,8 @@ if exists('+colorcolumn')
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" for pydiction tab autocomplete
+filetype plugin on
+let g:pydiction_location = '~/.vim/complete-dict'
+" let g:pydiction_menu_height = 3
