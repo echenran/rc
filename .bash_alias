@@ -22,7 +22,7 @@ alias db='cd /Users/ecr/Dropbox'
 
 # Shortcuts for school
 alias S='cd /Users/ecr/Documents/school/12\(2015-16\)'
-alias c='cd /Users/ecr/Documents/school/12\(2015-16\)/APCalcBC'
+alias c='cd /Users/ecr/Documents/college/todo'
 alias e='cd /Users/ecr/Documents/school/12\(2015-16\)/APEcon'
 alias g='cd /Users/ecr/Documents/school/12\(2015-16\)/APGov'
 alias l='cd /Users/ecr/Documents/school/12\(2015-16\)/APLit'
@@ -32,9 +32,11 @@ alias m='cd /Users/ecr/Documents/school/12\(2015-16\)/MathResearch'
 alias s='cd /Users/ecr/Documents/school/12\(2015-16\)/Sociology'
 alias h='cd /Users/ecr/Documents/school/12\(2015-16\)/highlander'
 
+alias ~='cd ~'
+
 # Paths for school
 export S='/Users/ecr/Documents/school/12(2015-16)'
-export c='/Users/ecr/Documents/school/12(2015-16)/APCalcBC'
+export c='/Users/ecr/Documents/college/todo'
 export e='/Users/ecr/Documents/school/12(2015-16)/APEcon'
 export g='/Users/ecr/Documents/school/12(2015-16)/APGov'
 export l='/Users/ecr/Documents/school/12(2015-16)/APLit'
@@ -64,3 +66,4 @@ alias gstatus='git status | tr "\n" "x9221" | sed "s/Untracked.*$//g" | tr "x922
 #----------Miscellaneous----------
 #Get one paragraph of ipsum
 alias templipsum='curl -s http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\>\ Lorem/Lorem/g | sed s/\<.p\>.*$//g'
+alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
