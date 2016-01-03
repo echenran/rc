@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+#gpg encrypt to ASCII armor
+gpge () {
+	gpg -r "${1}" --armor -se "${2}"
+}
+
+#download to mp3 from youtube video
+yt2mp3 () {
+  youtube-dl -x --audio-format mp3 "${1}"
+}
+
 #change volume
 v () {
   osascript -e "set volume ${1}"
@@ -59,17 +69,41 @@ new () {
   vim $fname
 }
 
+#Converts Celsius to Fahrenheit
 c2f () {
   echo ${1}*1.8+32|bc
 }
 
+#Converts Fahrenheit to Celsius
 f2c () {
   echo $(echo ${1}-32|bc)*.555|bc
 }
 
+#Converts pounds to Newtons
+lb2n () {
+	echo ${1}*4.4|bc
+}
+
+#Converts Newtons to pounds
+n2lb () {
+	echo ${1}*.225|bc
+}
+
+#Interacts with countdown.py and ~/.countdowns to add, remove, and list countdowns
+#Where ~/.countdowns is in the format:
+# name=15 Dec 2015
+# name1=8 May 2016
 cdown() {
   if [ $# == 0 ]; then
-    ./countdown.py;
+    if [ "$PWD" != "/Users/ecr" ]; then
+      tempdir="$PWD";
+      cd ~;
+      ./countdown.py;
+      cd $tempdir;
+      unset tempdir;
+    else
+      ./countdown.py;
+    fi
   elif [ "$1" == "-a" ]; then
     countdown="$2";
     results=$(cat ~/.countdowns | grep -ie "$countdown");
