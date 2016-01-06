@@ -67,3 +67,5 @@ alias gstatus='git status | tr "\n" "x9221" | sed "s/Untracked.*$//g" | tr "x922
 #Get one paragraph of ipsum
 alias templipsum='curl -s http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\>\ Lorem/Lorem/g | sed s/\<.p\>.*$//g'
 alias jsc='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+#sync counter
+alias sync++='synccount=$(echo $(cat ~/synccount)+1|bc); echo $synccount > ~/synccount'
