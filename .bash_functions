@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 
+#open a file in vim
+v () {
+	vim "${1}"
+}
+
+#open a file in emacs
+e () {
+	e "${1}"
+}
+
 #gpg encrypt to ASCII armor
+#1: recipient
+#2: file
 gpge () {
 	gpg -r "${1}" --armor -se "${2}"
 }
@@ -11,7 +23,7 @@ yt2mp3 () {
 }
 
 #change volume
-v () {
+vol () {
   osascript -e "set volume ${1}"
 }
 
@@ -44,7 +56,7 @@ wp () {
   curl -s ${1} | grep "<meta content='https://d" | tr "\n" " " | sed "s/<meta content='//g" | sed "s/'.*$//g" | xargs wget -O $pname".jpg";
 }
 
-#Checks if a file name is taken; if not, starts a new executable
+#Checks if a file name is taken; if not, starts a new file with 777 ACL
 new () {
   fname="${1}"  
   files=$(ls | grep -e $fname)
