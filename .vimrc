@@ -7,8 +7,7 @@ hi SpellBad ctermfg=015 ctermbg=017
 hi SpellCap ctermfg=015 ctermbg=023
 hi Search ctermfg=015 ctermbg=053
 
-set smarttab
-set autoindent shiftwidth=2 tabstop=2 noexpandtab
+set smarttab autoindent shiftwidth=2 tabstop=2 noexpandtab
 
 set spelllang=en
 set spell
@@ -17,7 +16,12 @@ map <C-w> db
 map <CR> i<CR>
 map ' i<CR><ESC>
 map <C-f> :set nohlsearch<CR><ESC>
-nmap <Tab> i<Tab><ESC>
+nmap <Tab> i<Tab><ESC>l
+map fm vipgq
+map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
+map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
+inoremap { {<CR>}<Esc>ko<Tab>
+inoremap ( ()<Esc>i
 
 " 80th column marker
 if exists('+colorcolumn')
