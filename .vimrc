@@ -1,6 +1,8 @@
 " Appearances
 set number
 set hlsearch
+set backup
+set backupdir=/tmp
 syntax on
 colorscheme elflord
 hi SpellBad ctermfg=015 ctermbg=017
@@ -12,6 +14,11 @@ set smarttab autoindent shiftwidth=2 tabstop=2 noexpandtab
 set spelllang=en
 set spell
 
+" Detect filetype
+filetype on
+filetype plugin indent on
+
+" Keymaps
 map <C-w> db
 map <CR> i<CR>
 map ' i<CR><ESC>
@@ -20,7 +27,7 @@ nmap <Tab> i<Tab><ESC>l
 map fm vipgq
 map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
 map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
-inoremap { {<CR>}<Esc>ko<Tab>
+inoremap { {<CR>}<Esc>ko
 inoremap ( ()<Esc>i
 
 " 80th column marker
