@@ -5,11 +5,6 @@ v () {
 	vim "${1}"
 }
 
-#open a file in emacs
-e () {
-	e "${1}"
-}
-
 #gpg encrypt to ASCII armor
 #1: recipient
 #2: file
@@ -141,4 +136,10 @@ cdown() {
     rm ~/.countdowns;
     echo "$tempcountdowns" > ~/.countdowns;
   fi
+}
+
+read223 () {
+	date=$(date "+%m/%d");
+	echo "Today's reading for CS223:";
+	cat ~/Documents/school/freshman\(2016-17\)/cpsc223/reading | tr "\n" "=" | sed "s@^.*"$date"@@g" | sed "s/\=\=.*$//g" | tr "=" "\n"
 }
