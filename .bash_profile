@@ -3,6 +3,9 @@
 # Moving window to the bottom of the screen
 osascript -e 'tell application "Terminal"' -e 'set position of front window to {0, 460}' -e 'end tell'
 
+# Setting background picture test
+osascript -e 'tell application "Finder"' -e 'set desktop picture to POSIX file "/your/filename.jpg"' -e 'end tell'
+
 # Customising prompt
 export PS1='\e[0;37m\u@\w \$\e[0m '
 
@@ -16,10 +19,16 @@ export EDITOR=vim
 # Allows for extended regexes
 shopt -s extglob
 
-# A rainbow, random ascii image from cowsay prints the dynamic IP
-cow=$(ls /opt/local/share/cowsay/cows | gshuf | head -1)
-ifconfig| grep -e "inet " | xargs echo | cowsay -f $cow | lolcat
-
 source /Users/ecr/.bash_alias
-source /Users/ecr/.bash_functions
+source ~/.bash_functions
 #banner -w 40 "thanks, thanks"
+
+# Exports global IP to env var
+
+# A rainbow, random ascii image from cowsay prints the dynamic IP and the reading assignment for CPSC223
+export cow=$(ls /opt/local/share/cowsay/cows | gshuf | head -1)
+> cowsay.txt
+echo "Current IP address: $(ip)" >> cowsay.txt
+echo "" >> cowsay.txt
+read223 >> cowsay.txt
+cat cowsay.txt | cowsay -f $cow | lolcat
