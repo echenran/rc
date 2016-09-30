@@ -3,17 +3,24 @@
 # General shortcuts
 
 # ls with colors
-alias ls='ls --color=always'
+alias ls='ls -G'
+#alias ls='ls --color=always'
+
 # ls all
-alias l='ls --color=always -lA'
+alias l='ls -lAG'
+
 # ls + sort by file size + display K, M, G, etc.
-alias lss='ls --color=always -lAhS'
+alias lss='ls -lAGSh'
+
 # ls + sort by last created with most recent at bottom - doesn't work intuitively
-alias lc='ls --color=always -lAUr'
+alias lc='ls -lAGUr'
+
 # ls + sort by last modified with most recent at bottom
-alias lm='ls --color=always -lAtr'
+alias lm='ls -lAGtr'
+
 # ls + sort by last accessed with most recent at bottom
-alias la='ls --color=always -lAur'
+alias la='ls -lAGur'
+
 # cd to Downloads
 alias dow='cd /Users/ecr/Downloads'
 # cd to Documents
@@ -26,30 +33,20 @@ alias db='cd /Users/ecr/Dropbox'
 alias ep='cd /Users/ecr/Movies/episodes'
 
 # Shortcuts for school
-alias s='cd /Users/ecr/Documents/school/12\(2015-16\)'
+alias s='cd /Users/ecr/Documents/school/freshman\(2016-17\)'
 alias c='cd /Users/ecr/Documents/college/todo'
-#alias e='cd /Users/ecr/Documents/school/12\(2015-16\)/APEcon'
-#alias g='cd /Users/ecr/Documents/school/12\(2015-16\)/APGov'
-#alias l='cd /Users/ecr/Documents/school/12\(2015-16\)/APLit'
-#alias f='cd /Users/ecr/Documents/school/12\(2015-16\)/APPhysicsC'
-#alias p='cd /Users/ecr/Documents/school/12\(2015-16\)/APPsych'
-#alias m='cd /Users/ecr/Documents/school/12\(2015-16\)/MathResearch'
-##alias s='cd /Users/ecr/Documents/school/12\(2015-16\)/Sociology'
-#alias h='cd /Users/ecr/Documents/school/12\(2015-16\)/highlander'
-#
-alias ~='cd ~'
+alias p='cd /Users/ecr/Documents/school/freshman\(2016-17\)/plsc254'
+alias d='cd /Users/ecr/Documents/school/freshman\(2016-17\)/cpsc223'
+alias e='cd /Users/ecr/Documents/school/freshman\(2016-17\)/span110'
+alias m='cd /Users/ecr/Documents/school/freshman\(2016-17\)/cpsc202'
 
 # Paths for school
-export s='/Users/ecr/Documents/school/12(2015-16)'
+export s='/Users/ecr/Documents/school/freshman(2016-17)'
 export c='/Users/ecr/Documents/college/todo'
-#export e='/Users/ecr/Documents/school/12(2015-16)/APEcon'
-#export g='/Users/ecr/Documents/school/12(2015-16)/APGov'
-#export l='/Users/ecr/Documents/school/12(2015-16)/APLit'
-#export f='/Users/ecr/Documents/school/12(2015-16)/APPhysicsC'
-#export p='/Users/ecr/Documents/school/12(2015-16)/APPsych'
-#export m='/Users/ecr/Documents/school/12(2015-16)/MathResearch'
-##export s='/Users/ecr/Documents/school/12(2015-16)/Sociology'
-#export h='/Users/ecr/Documents/school/12(2015-16)/highlander'
+export p='/Users/ecr/Documents/school/freshman(2016-17)/plsc254'
+export d='/Users/ecr/Documents/school/freshman(2016-17)/cpsc223'
+export e='/Users/ecr/Documents/school/freshman(2016-17)/span110'
+export m='/Users/ecr/Documents/school/freshman(2016-17)/cpsc202'
 
 # Other paths
 export db='/Users/ecr/Dropbox'
@@ -61,7 +58,7 @@ alias play='spotify play'
 alias pause='spotify pause'
 alias n='spotify next'
 alias pv='spotify prev'
-alias ip='ifconfig | grep -e "inet "'
+alias ip='ifconfig | grep -e "inet " | tr "\n" "+" | sed "s/^.*inet//g" | sed "s/[netmask|broadcast|0xfffff000]//g" | sed "s/\+//g"'
 alias br='brightness .5'
 alias ks='brightness 0'
 alias kw='killall Microsoft\ Word'
@@ -83,3 +80,9 @@ alias hw='open hh.*'
 alias herokucheck='heroku ps:scale web=1'
 #opens a pdf with Adobe Acrobat Pro
 alias aap='open -a Adobe\ Acrobat\ Pro'
+#turns off the wifi
+alias wifi='sudo ifconfig en0 down'
+#copies the shrug emoji to clipboard
+alias shrug='cat ~/.shrug | pbcopy'
+
+alias zebra='ssh rc866@zebra.zoo.cs.yale.edu'
