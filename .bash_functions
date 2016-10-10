@@ -140,6 +140,12 @@ cdown() {
 
 read223 () {
 	date=$(date "+%m/%d");
-	echo "Today's reading for CS223:";
-	cat ~/Documents/school/freshman\(2016-17\)/cpsc223/reading | tr "\n" "=" | sed "s@^.*"$date"@@g" | sed "s/\=\=.*$//g" | tr "=" "\n"
+	file='~/Documents/school/freshman\(2016-17\)/cpsc223/reading'; #from http://zoo.cs.yale.edu/classes/cs223/current/reading
+	isvaliddate=$(cat $file | grep $date)
+	if [ "$isvaliddate" != "" ]; then
+		echo "Today's reading for CS223:";
+		cat $file | tr "\n" "=" | sed "s@^.*"$date"@@g" | sed "s/\=\=.*$//g" | tr "=" "\n"
+	else
+		echo "No CS223 reading today! (But you should catch up on the ones you haven't done)";
+	fi
 }
