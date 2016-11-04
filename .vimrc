@@ -27,7 +27,9 @@ nmap <Tab> i<Tab><ESC>l
 map fm vipgq
 map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
 map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
-inoremap { {<CR>}<Esc>ko
+map s :w<CR>
+map q :wq<CR>
+inoremap { {<Esc>A<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
 
 " 80th column marker
