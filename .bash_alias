@@ -84,5 +84,9 @@ alias aap='open -a Adobe\ Acrobat\ Pro'
 alias wifi='sudo ifconfig en0 down'
 #copies the shrug emoji to clipboard
 alias shrug='cat ~/.shrug | pbcopy'
+#vim
+alias v='vim'
+#opens ~/.todo in vim
+alias todo='vim ~/.todo'
 
 alias zebra='ssh rc866@zebra.zoo.cs.yale.edu'
