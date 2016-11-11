@@ -13,6 +13,7 @@ set smarttab autoindent shiftwidth=2 tabstop=2 noexpandtab
 
 set spelllang=en
 set spell
+"set mouse=a
 
 " Detect filetype
 filetype on
@@ -28,6 +29,7 @@ map fm vipgq
 map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
 map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
 map s :w<CR>
+map <Esc> <Esc>:w<CR>
 map q :wq<CR>
 inoremap { {<Esc>A<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
