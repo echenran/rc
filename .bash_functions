@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-#open a file in vim
-v () {
-	vim "${1}"
-}
-
 #gpg encrypt to ASCII armor
 #1: recipient
 #2: file
@@ -141,7 +136,7 @@ cdown() {
 read223 () {
 	date=$(date "+%m/%d");
 	file='~/Documents/school/freshman\(2016-17\)/cpsc223/reading'; #from http://zoo.cs.yale.edu/classes/cs223/current/reading
-	isvaliddate=$(cat $file | grep $date)
+	isvaliddate=$(cat ~/Documents/school/freshman\(2016-17\)/cpsc223/reading | grep $date)
 	if [ "$isvaliddate" != "" ]; then
 		echo "Today's reading for CS223:";
 		cat $file | tr "\n" "=" | sed "s@^.*"$date"@@g" | sed "s/\=\=.*$//g" | tr "=" "\n"
