@@ -29,6 +29,7 @@ map fm vipgq
 map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
 map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
 map s :w<CR>
+map x :q!<CR>
 map q :wq<CR>
 inoremap { {<Esc>A<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
