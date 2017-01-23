@@ -35,18 +35,18 @@ alias ep='cd /Users/ecr/Movies/episodes'
 # Shortcuts for school
 alias s='cd ~/school'
 alias c='cd ~/Documents/collegeapps'
-alias p='cd ~/school/plsc254'
-alias d='cd ~/school/cpsc223'
-alias e='cd ~/school/span110'
-alias m='cd ~/school/cpsc202'
+alias p='cd ~/school/plsc232'
+alias a='cd ~/school/cpsc365'
+alias e='cd ~/school/span120'
+alias nlp='cd ~/school/cpsc477'
 
 # Paths for school
 export s='/Users/ecr/school'
 export c='/Users/ecr/collegeapps'
-export p='/Users/ecr/school/plsc254'
-export d='/Users/ecr/school/cpsc223'
-export e='/Users/ecr/school/span110'
-export m='/Users/ecr/school/cpsc202'
+export p='/Users/ecr/school/plsc232'
+export a='/Users/ecr/school/cpsc365'
+export e='/Users/ecr/school/span120'
+export nlp='/Users/ecr/school/cpsc477'
 
 # Other paths
 export db='/Users/ecr/Dropbox'
