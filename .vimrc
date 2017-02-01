@@ -8,12 +8,17 @@ colorscheme elflord
 hi SpellBad ctermfg=015 ctermbg=017
 hi SpellCap ctermfg=015 ctermbg=023
 hi Search ctermfg=015 ctermbg=053
+hi CursorLine cterm=NONE ctermbg=235 guibg=235
+hi CursorColumn cterm=NONE ctermbg=235 guibg=235
 
 set smarttab autoindent shiftwidth=2 tabstop=2 noexpandtab
+set wrap linebreak nolist
+set textwidth=0 wrapmargin=0
 
 set spelllang=en
 set spell
 set mouse=a
+set cursorline cursorcolumn
 
 " Detect filetype
 filetype on
