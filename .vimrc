@@ -8,11 +8,12 @@ colorscheme elflord
 hi SpellBad ctermfg=015 ctermbg=017
 hi SpellCap ctermfg=015 ctermbg=023
 hi Search ctermfg=015 ctermbg=053
-hi CursorLine cterm=NONE ctermbg=235 guibg=235
-hi CursorColumn cterm=NONE ctermbg=235 guibg=235
+hi CursorLine cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
 
 set smarttab autoindent shiftwidth=2 tabstop=2 noexpandtab
 set wrap linebreak nolist
+set backspace=indent,eol,start
 set textwidth=0 wrapmargin=0
 
 set spelllang=en
@@ -33,9 +34,10 @@ nmap <Tab> i<Tab><ESC>l
 map fm vipgq
 map r0 :%s/’/'/g<CR><ESC>:w<CR>[[
 map r9 :%s/[”\|“]/"/g<CR><ESC>:w<CR>[[
-map s :w<CR>
+map e :w<CR>
 map x :q!<CR>
 map q :wq<CR>
+"map cp :w<CR>:!cat % |vipe| !pbcopy TODO
 inoremap { {<Esc>A<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
 
