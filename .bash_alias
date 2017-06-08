@@ -38,15 +38,15 @@ alias c='cd ~/Documents/collegeapps'
 alias p='cd ~/school/plsc232'
 alias a='cd ~/school/cpsc365'
 alias e='cd ~/school/span120'
-alias nlp='cd ~/school/cpsc477'
+alias n='cd ~/school/cpsc477'
 
 # Paths for school
 export s='/Users/ecr/school'
-export c='/Users/ecr/collegeapps'
+export c='/Users/ecr/Documents/collegeapps'
 export p='/Users/ecr/school/plsc232'
 export a='/Users/ecr/school/cpsc365'
 export e='/Users/ecr/school/span120'
-export nlp='/Users/ecr/school/cpsc477'
+export n='/Users/ecr/school/cpsc477'
 
 # Other paths
 export db='/Users/ecr/Dropbox'
@@ -56,7 +56,7 @@ export ep='/Users/ecr/Movies/episodes'
 alias jp2a='jp2a -i --height=60'
 alias play='spotify play'
 alias pause='spotify pause'
-alias n='spotify next'
+alias nx='spotify next'
 alias pv='spotify prev'
 alias ip='ifconfig | grep -e "inet " | tr "\n" "+" | sed "s/^.*inet//g" | sed "s/[netmask|broadcast|0xfffff000]//g" | sed "s/\+//g"'
 alias br='brightness .5'
@@ -74,8 +74,6 @@ alias templipsum='curl -s http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\
 alias js='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
 #sync counter
 alias sync++='synccount=$(echo $(cat ~/.synccount)+1|bc); echo $synccount > ~/.synccount'
-#opens Psych hw in Preview
-alias hw='open hh.*'
 #checks if a heroku app is up
 alias herokucheck='heroku ps:scale web=1'
 #opens a pdf with Adobe Acrobat Pro
@@ -91,4 +89,17 @@ alias todo='vim ~/.todo'
 #calculates gpa
 alias gpa='~/Documents/otherpeoplesdocs/bonnie-gpacalc.py'
 #connects to the zoo
-alias zoo='ssh rc866@node.zoo.cs.yale.edu'
+alias zoo='ssh rc866@viper.zoo.cs.yale.edu'
+#connects to ONEXYS EC2 server
+alias ec2='ssh -i ~/.ssh/ecr-onexys.pem ec2-user@52.10.141.249'
+#starts selenium server for campus map
+alias sens='java -Dweb.chrome.driver=~/campus-map/bin/chromedriver -jar ~/campus-map/bin/selenium-server-standalone-3.3.1.jar'
+#goes back to previous directory
+alias back='cd $OLDPWD'
+#don't want to type out pbcopy and pbpaste
+alias cpy='pbcopy'
+alias pst='pbpaste'
+#open a syllabus
+alias hw='open syllabus.pdf'
+#ssh into zoo with display variables configured *ONLY ON X11 SERVER*
+alias xzoo='ssh -XC rc866@node.zoo.cs.yale.edu'
