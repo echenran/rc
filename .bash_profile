@@ -6,10 +6,9 @@ osascript -e 'tell application "Terminal"' -e 'set position of front window to {
 parse_git_branch() {
 	git branch | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-#export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+
 # Customising prompt
-#export PS1='\e[0;37m\u@\w\$(parse_git_branch)\$\e[0m '
-export PS1='\[\e[0;37m\]\u@\w\[\e[0;33m$(parse_git_branch)\e[0m \[\e[0;37m\]$\[\e[m\] '
+export PS1='\[\e[0;37m\]\u@\w\[\e[0m\]\[\e[0;33m\]$(parse_git_branch)\[\e[0m\] \[\e[0;37m\]\$\[\e[0m\] '
 
 # Setting PATH for Python 3.4
 # The original version is saved in .bash_profile.pysave
