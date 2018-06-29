@@ -9,6 +9,8 @@ parse_git_branch() {
 
 # Customising prompt
 export PS1='\[\e[0;37m\]\u@\w\[\e[0m\]\[\e[0;33m\]$(parse_git_branch)\[\e[0m\] \[\e[0;37m\]\$\[\e[0m\] '
+# Prompt for remote machines
+#export PS1='\[\e[0;37m\]\u@\[\e[0m\]\[\e[0;36m\]\h\[\e[0m\]\[\e[0;37m\]:\w\[\e[0m\]\[\e[0;33m\]$(parse_git_branch)\[\e[0m\] \[\e[0;37m\]\$\[\e[0m\] '
 
 # Setting PATH for Python 3.4
 # The original version is saved in .bash_profile.pysave
