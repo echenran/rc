@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+# cd to Downloads
+alias dow='cd /Users/ecr/Downloads'
+# cd to Documents
+alias doc='cd /Users/ecr/Documents'
+# cd to Google Drive
+alias dr='cd /Users/ecr/Google\ Drive/'
+# cd to Dropbox
+alias db='cd /Users/ecr/Dropbox'
+# cd to shows
+alias ep='cd /Users/ecr/Movies/episodes'
+
+# Shortcuts for school
+alias s='cd /Users/ecr/school'
+alias c='cd /Users/ecr/Documents/collegeapps'
+alias ds='cd /Users/ecr/school/cpsc323'
+alias n='cd /Users/ecr/school/cpsc433'
+alias e='cd /Users/ecr/school/span140'
+alias cl='cd /Users/ecr/school/plsc233'
+
+# Paths for school
+export s='/Users/ecr/school'
+export c='/Users/ecr/Documents/collegeapps'
+export ds='/Users/ecr/school/cpsc323'
+export n='/Users/ecr/school/cpsc433'
+export e='/Users/ecr/school/span140'
+export cl='/Users/ecr/school/plsc233'
+
+# Other paths
+export db='/Users/ecr/Dropbox'
+export ep='/Users/ecr/Movies/episodes'
+
+#----------Aliases for modules----------
+alias jp2a='jp2a -i --height=60'
+alias play='spotify play'
+alias pause='spotify pause'
+alias nx='spotify next'
+alias pv='spotify prev'
+alias ip='ifconfig | grep -e "inet " | tr "\n" "+" | sed "s/^.*inet//g" | sed "s/[netmask|broadcast|0xfffff000]//g" | sed "s/\+//g"'
+alias br='brightness .5'
+alias ks='brightness 0'
+alias kw='killall Microsoft\ Word'
+alias ki='killall iTunes'
+alias kp='killall Preview'
+alias gstatus='git status | tr "\n" "x9221" | sed "s/Untracked.*$//g" | tr "x9221" "\n"'
+alias pm='cd ~;./passman.py'
+alias py='python'
+alias hide='~/.scripts/hide.py'
+
+#----------Miscellaneous----------
+#Get one paragraph of ipsum
+alias templipsum='curl -s http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\>\ Lorem/Lorem/g | sed s/\<.p\>.*$//g'
+#Starts JS shell
+alias js='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
+#sync counter
+alias sync++='synccount=$(echo $(cat ~/.synccount)+1|bc); echo $synccount > ~/.synccount'
+#checks if a heroku app is up
+alias herokucheck='heroku ps:scale web=1'
+#opens a pdf with Adobe Acrobat Pro
+alias aap='open -a Adobe\ Acrobat\ Pro'
+#turns off the wifi
+alias wifi='sudo ifconfig en0 down'
+#copies the shrug emoji to clipboard
+alias shrug='cat ~/.shrug | pbcopy'
+#vim
+alias v='vim'
+#opens ~/.todo in vim
+alias todo='vim ~/.todo'
+#calculates gpa
+alias gpa='~/Documents/otherpeoplesdocs/bonnie-gpacalc.py'
+#connects to the zoo
+alias zoo='ssh rc866@viper.zoo.cs.yale.edu'
+#connects to ONEXYS EC2 server
+alias ec2='ssh -i ~/.ssh/ecr-onexys.pem ec2-user@52.10.141.249'
+#starts selenium server for campus map
+alias sens='java -Dweb.chrome.driver=~/campus-map/bin/chromedriver -jar ~/campus-map/bin/selenium-server-standalone-3.3.1.jar'
+#goes back to previous directory
+alias back='cd $OLDPWD'
+#don't want to type out pbcopy and pbpaste
+alias cpy='pbcopy'
+alias pst='pbpaste'
+#open a syllabus
+alias hw='open syllabus.*'
+#ssh into zoo with display variables configured *ONLY ON X11 SERVER*
+alias xzoo='ssh -XC rc866@node.zoo.cs.yale.edu'

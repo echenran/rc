@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# General shortcuts
-
 # ls with colors
 alias ls='ls -G'
 #alias ls='ls --color=always'
@@ -18,88 +16,13 @@ alias lc='ls -lAGUr'
 # ls + sort by last modified with most recent at bottom
 alias lm='ls -lAGtr'
 
+# ls + sort by last read with most recent at bottom
+alias lr='ls -lAtur'
+
 # ls + sort by last accessed with most recent at bottom
 alias la='ls -lAGur'
 
-# cd to Downloads
-alias dow='cd /Users/ecr/Downloads'
-# cd to Documents
-alias doc='cd /Users/ecr/Documents'
-# cd to Google Drive
-alias dr='cd /Users/ecr/Google\ Drive/'
-# cd to Dropbox
-alias db='cd /Users/ecr/Dropbox'
-# cd to shows
-alias ep='cd /Users/ecr/Movies/episodes'
-
-# Shortcuts for school
-alias s='cd ~/school'
-alias c='cd ~/Documents/collegeapps'
-alias p='cd ~/school/plsc232'
-alias a='cd ~/school/cpsc365'
-alias e='cd ~/school/span120'
-alias n='cd ~/school/cpsc477'
-
-# Paths for school
-export s='/Users/ecr/school'
-export c='/Users/ecr/Documents/collegeapps'
-export p='/Users/ecr/school/plsc232'
-export a='/Users/ecr/school/cpsc365'
-export e='/Users/ecr/school/span120'
-export n='/Users/ecr/school/cpsc477'
-
-# Other paths
-export db='/Users/ecr/Dropbox'
-export ep='/Users/ecr/Movies/episodes'
-
-#----------Aliases for modules----------
-alias jp2a='jp2a -i --height=60'
-alias play='spotify play'
-alias pause='spotify pause'
-alias nx='spotify next'
-alias pv='spotify prev'
-alias ip='ifconfig | grep -e "inet " | tr "\n" "+" | sed "s/^.*inet//g" | sed "s/[netmask|broadcast|0xfffff000]//g" | sed "s/\+//g"'
-alias br='brightness .5'
-alias ks='brightness 0'
-alias kw='killall Microsoft\ Word'
-alias ki='killall iTunes'
-alias kp='killall Preview'
-alias gstatus='git status | tr "\n" "x9221" | sed "s/Untracked.*$//g" | tr "x9221" "\n"'
-alias pm='cd ~;./passman.py'
-
-#----------Miscellaneous----------
-#Get one paragraph of ipsum
-alias templipsum='curl -s http://lipsum.com/feed/html | tr "\n" " " | sed s/^.*\>\ Lorem/Lorem/g | sed s/\<.p\>.*$//g'
-#Starts JS shell
-alias js='/System/Library/Frameworks/JavaScriptCore.framework/Versions/Current/Resources/jsc'
-#sync counter
-alias sync++='synccount=$(echo $(cat ~/.synccount)+1|bc); echo $synccount > ~/.synccount'
-#checks if a heroku app is up
-alias herokucheck='heroku ps:scale web=1'
-#opens a pdf with Adobe Acrobat Pro
-alias aap='open -a Adobe\ Acrobat\ Pro'
-#turns off the wifi
-alias wifi='sudo ifconfig en0 down'
-#copies the shrug emoji to clipboard
-alias shrug='cat ~/.shrug | pbcopy'
-#vim
-alias v='vim'
-#opens ~/.todo in vim
-alias todo='vim ~/.todo'
-#calculates gpa
-alias gpa='~/Documents/otherpeoplesdocs/bonnie-gpacalc.py'
-#connects to the zoo
-alias zoo='ssh rc866@viper.zoo.cs.yale.edu'
-#connects to ONEXYS EC2 server
-alias ec2='ssh -i ~/.ssh/ecr-onexys.pem ec2-user@52.10.141.249'
-#starts selenium server for campus map
-alias sens='java -Dweb.chrome.driver=~/campus-map/bin/chromedriver -jar ~/campus-map/bin/selenium-server-standalone-3.3.1.jar'
-#goes back to previous directory
-alias back='cd $OLDPWD'
-#don't want to type out pbcopy and pbpaste
-alias cpy='pbcopy'
-alias pst='pbpaste'
-#open a syllabus
-alias hw='open syllabus.pdf'
-#ssh into zoo with display variables configured *ONLY ON X11 SERVER*
-alias xzoo='ssh -XC rc866@node.zoo.cs.yale.edu'
+#----------tmux----------
+alias list='tmux list-sessions'
+alias tas='tmux attach -t'
+alias tss='tmux switch-client -t'
