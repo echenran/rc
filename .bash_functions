@@ -1,10 +1,27 @@
 #!/usr/bin/env bash
 
+#hide 1+ files/directories
+hide () {
+	~/.scripts/hide.py "${@}"
+}
+
+#unhide 1+ files/directories
+unhide () {
+	~/.scripts/hide.py unhide "${@}"
+}
+
 #gpg encrypt to ASCII armor
 #1: recipient
 #2: file
 gpge () {
 	gpg -r "${1}" --armor -se "${2}"
+}
+
+#gpg export public key
+#1: username
+#2: file
+gpgex () {
+	gpg --export -a "${1}" > "${2}"
 }
 
 #download to mp3 from youtube video
